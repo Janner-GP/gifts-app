@@ -1,0 +1,11 @@
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div *ngFor="let gif of gifs" class="col animate__animated animate__fadeIn">
+      <div class="card text-bg-dark">
+        <shared-lazy-image [url]="gif.images.downsized_medium.url" [alt]="gif.title || 'No name'"></shared-lazy-image>
+        <!-- <img [src]="gif.images.downsized_medium.url" class="card-img-top" alt="{{ gif.title }}"> -->
+        <div class="card-body">
+          <h5 class="card-title">{{ gif.title }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
